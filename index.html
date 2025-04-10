@@ -162,6 +162,7 @@
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(formData),
+          mode: "no-cors" // (если CORS всё равно мешает, но лучше исправить настройки скрипта)
         });
         
         if (!response.ok) throw new Error("Ошибка сервера");
